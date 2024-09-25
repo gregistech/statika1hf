@@ -3,9 +3,9 @@ origin = [0 0 0];
 
 figure;
 hold on;
-grid on;
+grid off;
 axis equal;
-view(135, 10);
+view(140, 7);
 zoom(1);
 
 axis_scale = 1.5;
@@ -31,10 +31,6 @@ E = [0, b, 0];
 
 points = [A; B; C; D; E];
 point_names = ["A"; "B"; "C"; "D"; "E"];
-
-for i = 1:size(points, 1)
-    text(points(i, 1), points(i, 2), points(i, 3), point_names(i), "FontSize", 12);
-end
 
 solid_width = 4;
 displayLine(A, B, solid_width, "k");
@@ -62,3 +58,9 @@ end
 for i = 1:size(M, 1)
     displayVector(rm(i, :), M(i, :), i, "M", origin);
 end
+
+for i = 1:size(points, 1)
+    text(points(i, 1), points(i, 2), points(i, 3), point_names(i), "FontSize", 16);
+end
+
+matlab2tikz('graph.tex', 'arrowHeadSize', 1);
