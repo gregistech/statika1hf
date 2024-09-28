@@ -13,6 +13,10 @@ function [] = displayVector(start, vector, order, prefix, origin)
 
     quiver3(start(1), start(2), start(3), vector(1), vector(2), vector(3), "LineWidth", 3);
     mid = (2*start + vector) / 2
-    text(mid(1), mid(2), mid(3), sprintf('%s_%d', prefix, order), 'FontSize', 12)
+    if order == 0
+        text(mid(1), mid(2), mid(3), sprintf('%s', prefix), 'FontSize', 12)
+    else
+        text(mid(1), mid(2), mid(3), sprintf('%s_%d', prefix, order), 'FontSize', 12)
+    end
 end
 

@@ -48,6 +48,18 @@ r = [[a, 0, 0]; [0, b, c]; [a, b, c]];
 M = [[.8, .5, .3]; [0, 0, -2.1]];
 rm = [[0, b, 0]; [a, 0, c]];
 
+Fs = [-.7 -2 -1];
+M0 = [1.2 1.32 -2.49];
+Mf = [.126 .361 .18];
+rg = [1.148 -.536 .269];
+MG = [0.126 0.36 0.181];
+
+displayVector(origin, M0, 0, "M_0", origin);
+displayVector(origin, Mf, 0, "M_f", origin);
+displayVector(origin, rg, 0, "r_g", origin);
+displayVector(rg, MG, 0, "M_G", origin);
+displayVector(origin, Fs, 0, "F", origin);
+
 for i = 1:size(F, 1)
     displayVector(r(i, :), F(i, :), i, "F", origin);
 end
@@ -66,4 +78,4 @@ displayLine(B, C, solid_width, "--k");
 displayLine(C, D, solid_width, "--k");
 displayLine(D, E, solid_width, "--k");
 
-matlab2tikz('graph.tex', 'arrowHeadSize', 1, 'width', '12cm');
+matlab2tikz('graph2.tex', 'arrowHeadSize', 1, 'width', '12cm');

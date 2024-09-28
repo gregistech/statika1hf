@@ -4,11 +4,13 @@
 %  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
 %where you can also make suggestions and rate matlab2tikz.
 %
-\definecolor{mycolor1}{rgb}{0.00000,0.39200,0.00000}%
+\definecolor{mycolor1}{rgb}{0.00000,0.62700,0.52900}%
 \definecolor{mycolor2}{rgb}{0.00000,0.44700,0.74100}%
 \definecolor{mycolor3}{rgb}{0.85000,0.32500,0.09800}%
 \definecolor{mycolor4}{rgb}{0.92900,0.69400,0.12500}%
 \definecolor{mycolor5}{rgb}{0.49400,0.18400,0.55600}%
+\definecolor{mycolor6}{rgb}{0.46600,0.67400,0.18800}%
+\definecolor{mycolor7}{rgb}{0.30100,0.74500,0.93300}%
 %
 \begin{tikzpicture}
 
@@ -71,32 +73,67 @@ at (axis cs:0,0,1.5) {Z};
  \addplot3[-Straight Barb, color=mycolor1, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	z	u	v	w\\
+0	0	0	1.08	1.188	-2.241\\
+};
+\node[right, align=left, inner sep=0]
+at (axis cs:0.6,0.66,-1.245) {$\text{M}_\text{0}$};
+\addplot3[-Straight Barb, color=mycolor2, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	0.1134	0.3249	0.162\\
+};
+\node[right, align=left, inner sep=0]
+at (axis cs:0.063,0.18,0.09) {$\text{M}_\text{f}$};
+\addplot3[-Straight Barb, color=mycolor3, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	1.0332	-0.4824	0.2421\\
+};
+\node[right, align=left, inner sep=0]
+at (axis cs:0.574,-0.268,0.134) {$\text{r}_\text{g}$};
+\addplot3[-Straight Barb, color=mycolor4, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+1.148	-0.536	0.269	0.1134	0.324	0.1629\\
+};
+\node[right, align=left, inner sep=0]
+at (axis cs:1.211,-0.356,0.359) {$\text{M}_\text{G}$};
+\addplot3[-Straight Barb, color=mycolor5, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
+0	0	0	-0.63	-1.8	-0.9\\
+};
+\node[right, align=left, inner sep=0]
+at (axis cs:-0.35,-1,-0.5) {F};
+\addplot3[-Straight Barb, color=mycolor6, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	z	u	v	w\\
 0.3	0	0	-1.8	-0.9	-0.9\\
 };
 \node[right, align=left, inner sep=0]
 at (axis cs:-0.7,-0.5,-0.5) {$\text{F}_\text{1}$};
-\addplot3[-Straight Barb, color=mycolor2, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot3[-Straight Barb, color=mycolor7, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	z	u	v	w\\
 0	0.3	0.4	0	-0.9	0\\
 };
 \node[right, align=left, inner sep=0]
 at (axis cs:0,-0.2,0.4) {$\text{F}_\text{2}$};
-\addplot3[-Straight Barb, color=mycolor3, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot3[-Straight Barb, color=mycolor1, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	z	u	v	w\\
 0.3	0.3	0.4	1.17	0	0\\
 };
 \node[right, align=left, inner sep=0]
 at (axis cs:0.95,0.3,0.4) {$\text{F}_\text{3}$};
-\addplot3[-Straight Barb, color=mycolor4, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot3[-Straight Barb, color=mycolor2, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	z	u	v	w\\
 0	0.3	0	0.72	0.45	0.27\\
 };
 \node[right, align=left, inner sep=0]
 at (axis cs:0.4,0.55,0.15) {$\text{M}_\text{1}$};
-\addplot3[-Straight Barb, color=mycolor5, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
+\addplot3[-Straight Barb, color=mycolor3, line width=3.0pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2+(\thisrow{w})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, w=\thisrow{w}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={1/1000*\pgfplotspointmetatransformed}]}}}]
  table[row sep=crcr] {%
 x	y	z	u	v	w\\
 0.3	0	0.4	0	0	-1.89\\
